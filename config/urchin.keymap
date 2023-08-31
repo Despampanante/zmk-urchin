@@ -99,9 +99,9 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-                &kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-                &kp LESS_THAN &kp USD &kp LPAR &kp LBRC &kp LBKT  &kp EQL &kp QUES &kp SQUOT &kp MINUS &kp AST
-                &kp GREAT &kp PERC &kp RPAR &kp RBRC &kp RBKT 	&kp AT &kp EXCL &kp DQUOT &kp PLUS &kp FSLH
+			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
+			&kp KP_LESS &kp KP_USD &kp KP_LPAR &kp KP_LBRC &kp KP_LBKT  &kp KP_EQL &kp KP_QUES &kp KP_SQUOT &kp KP_MINUS &kp KP_AST
+			&kp KP_GREAT &kp KP_PERC &kp KP_RPAR &kp KP_RBRC &kp KP_RBKT 	&kp KP_AT &kp KP_EXCL &kp KP_DQUOT &kp KP_PLUS &kp KP_FSLH
 														&mo FNC  &mo SYM2       &trans &trans
 			>;
 		};
@@ -132,9 +132,9 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp CARET &kp UNDER &kp PND &kp EUR &kp HASH         &none &none &none &none &none
-			&kp BKTK &kp TILDE &kp BSLH &kp PIPE &kp AND         &none &none &none &none &none
-			&none 			&none 			 &kp SECT &kp CCED &kp DEG				  &none &none &none &none &none
+			&kp KP_CARET &kp KP_UNDER &kp KP_PND &kp KP_EUR &kp KP_HASH         &none &none &none &none &none
+			&kp KP_BKTK &kp KP_TILDE &kp KP_BSLH &kp KP_PIPE &kp KP_AND         &none &none &none &none &none
+			&none 			&none 			 &kp KP_SECT &kp KP_CCED &kp KP_DEG				  &none &none &none &none &none
 																	&none &none        	&none &none
 			>;
 		};
@@ -143,9 +143,9 @@
 		accent_layer {
 			label = "Accent";
 			bindings = <
-			&none &none &none &kp CEGR &none                         &none &none &none &none &none
-			&kp AGRV &kp IGRV &kp OGRV &kp EGRV &kp EACU &none &none &none &none &none
-			&none &none &none &kp UGRV &none                         &none &none &none &none &none
+			&none &none &none &kp KP_CEGR &none                         &none &none &none &none &none
+			&kp KP_AGRV &kp KP_IGRV &kp KP_OGRV &kp KP_EGRV &kp KP_EACU &none &none &none &none &none
+			&none &none &none &kp KP_UGRV &none                         &none &none &none &none &none
 									&none &none                         &none &none
 			>;
 		};
