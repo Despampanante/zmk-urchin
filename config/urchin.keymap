@@ -99,10 +99,6 @@
 		sym_layer {
 			label = "Sym.";
 			bindings = <
-			&kp N1 &kp N2 &kp N3 &kp N4 &kp N5		                                    &kp N6 &kp N7 &kp N8 &kp N9 &kp N0
-			&kp KP_LESS &kp KP_USD &kp KP_LPAR &kp KP_LBRC &kp KP_LBKT  &kp KP_EQL &kp KP_QUES &kp KP_SQUOT &kp KP_MINUS &kp KP_AST
-			&kp KP_GREAT &kp KP_PERC &kp KP_RPAR &kp KP_RBRC &kp KP_RBKT 	&kp KP_AT &kp KP_EXCL &kp KP_DQUOT &kp KP_PLUS &kp KP_FSLH
-														&mo FNC  &mo SYM2       &trans &trans
 			>;
 		};
 
