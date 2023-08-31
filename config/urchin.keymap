@@ -15,7 +15,6 @@
 #define EXT 2
 #define FNC 3
 #define SYM2 4
-#define ACCENT 5
 #define SETTINGS 6
 // -----------------
 
@@ -54,12 +53,6 @@
 
 	combos {
 		compatible = "zmk,combos";
-		// both right thumb keys
-		combo_accent {
-			timeout-ms = <200>;
-			key-positions = <32 33>;
-			bindings = <&mo ACCENT>;
-		};
 		// internal-left & external-right thumb keys
 		combo_sym2 {
 			timeout-ms = <200>;
@@ -128,21 +121,6 @@
 		symbols_2_layer {
 			label = "Sym.2";
 			bindings = <
-			&kp KP_CARET &kp KP_UNDER &kp KP_PND &kp KP_EUR &kp KP_HASH         &none &none &none &none &none
-			&kp KP_BKTK &kp KP_TILDE &kp KP_BSLH &kp KP_PIPE &kp KP_AND         &none &none &none &none &none
-			&none 			&none 			 &kp KP_SECT &kp KP_CCED &kp KP_DEG				  &none &none &none &none &none
-																	&none &none        	&none &none
-			>;
-		};
-
-		// Used to type regional accents.
-		accent_layer {
-			label = "Accent";
-			bindings = <
-			&none &none &none &kp KP_CEGR &none                         &none &none &none &none &none
-			&kp KP_AGRV &kp KP_IGRV &kp KP_OGRV &kp KP_EGRV &kp KP_EACU &none &none &none &none &none
-			&none &none &none &kp KP_UGRV &none                         &none &none &none &none &none
-									&none &none                         &none &none
 			>;
 		};
 
