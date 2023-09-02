@@ -19,8 +19,8 @@
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
 };
-
-    keymap {
+/ {
+     keymap {
         compatible = "zmk,keymap";
         default_layer {
             bindings = <
