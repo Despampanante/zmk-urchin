@@ -44,7 +44,7 @@
             bindings = <
             &kp EXCL  &kp AT   &kp HASH &kp DOLLAR &kp PRCNT         &trans     &trans     &trans     &trans    &trans
             &kp CARET &kp AMPS &kp STAR &kp MINUS  &kp EQUAL         &trans     &trans     &trans     &trans    &trans
-            &kp BSLH  &kp pipe &trans   &kp UNDER  &kp PLUS        &trans     &trans     &trans     &trans    &trans
+            &kp BSLH  &kp PIPE &trans   &kp UNDER  &kp PLUS          &trans     &trans     &trans     &trans    &trans
                                              &trans    &trans        &trans     &trans
             >;
         };
