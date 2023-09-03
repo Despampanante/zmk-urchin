@@ -10,83 +10,71 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define default 0
-#define NAV 1
-#define NUM 2
-#define SYM 3
-#define FUN 4
+#define NUM 1
+#define SYM 2
+#define NAV 3
+#define BT 4
 
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
 };
 / {
+        combos {
+        compatible = "zmk,combos";
+        combo_caps_word {
+            timeout-ms = <100>;
+            key-positions = <10 30>;
+            bindings = <&mo BT>;
+        };
+    };
+
      keymap {
         compatible = "zmk,keymap";
+
         default_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  Q       │  W       │  F       │  P       │  B       │   │  J       │  L       │  U       │  Y       │  ;       │
-            &kp Q      &kp W      &kp F      &kp P      &kp B          &kp J      &kp L      &kp U      &kp Y      &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  R       │  S       │  T       │  G       │   │  M       │  N       │  E       │  I       │  O       │
-           &mt LGUI A &mt LALT R &mt LSHIFT S &mt LCTRL T &kp G        &kp M    &mt LCTRL N &mt RSHIFT E &mt LALT I &mt LGUI O
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  D       │  V       │   │  K       │  H       │ ,        │ .        │ /        │
-            &kp Z      &kp X      &kp C      &kp D      &kp V          &kp K      &kp H      &kp COMMA  &kp DOT    &kp FSLH
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt NUM TAB   &lt NAV SPACE     &lt SYM ENTER  &lt NUM BSPC
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+        &kp Q      &kp W      &kp F      &kp P         &kp B          &kp J      &kp L       &kp U        &kp Y     &kp SEMI
+        &mt LCTRL A &mt LALT R &mt LSHIFT S &mt LGUI T &kp G          &kp M      &mt LGUI N &mt RSHIFT E &mt LALT I &mt LCTRL O
+        &kp Z      &kp X      &kp C      &kp D         &kp V          &kp K      &kp H       &kp COMMA    &kp DOT   &kp FSLH
+                                         &lt NUM TAB   &lt NAV SPACE  &lt SYM ENTER  &lt NUM BSPC
             >;
         };
         SYM {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │ 7        │ 8        │ 9        │          │
-            &trans     &trans     &trans     &trans     &trans         &trans  &trans  &trans  &kp END    &kp COLON
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ LEFT     │ 4        │ 5        │ 6        │          │
-            &trans     &trans     &trans     &trans     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ 0        │  1       │ 2        │ 3        │          │
-            &trans  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &trans    &trans        &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            &kp EXCL  &kp AT   &kp HASH &kp DOLLAR &kp PRCNT         &trans     &trans     &trans     &trans    &trans
+            &kp CARET &kp AMPS &kp STAR &kp MINUS  &kp EQUAL         &trans     &trans     &trans     &trans    &trans
+            &kp BSLH  &kp pipe &trans   &kp UNDER  &kp PLUS        &trans     &trans     &trans     &trans    &trans
+                                             &trans    &trans        &trans     &trans
             >;
         };
         NUM {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │ 7        │ 8        │ 9        │          │
-            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &kp END    &kp COLON
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ LEFT     │ 4        │ 5        │ 6        │          │
-            &trans     &trans     &trans     &trans     &trans         &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ 0        │  1       │ 2        │ 3        │          │
-            &trans  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &trans     &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &trans    &trans        &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &kp END    &kp COLON
+            &trans     &trans     &trans     &trans     &trans       &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &trans     &trans     &trans     &trans     &trans       &trans     &trans     &trans     &trans     &trans
+                                             &trans     &trans       &trans     &trans
             >;
         };
 
         NAV {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │          │          │   │          │ {        │ }        │ (        │  )       │
-            &trans  &trans  &trans  &trans  &trans      &trans  &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &trans  &trans  &trans  &trans  &trans      &kp LARW   &kp DARW   &kp UARW   &kp RARW   &kp SEMI
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │          │  [       │ ]        │ <        │ >        │
-            &trans  &trans  &trans  &trans  &trans      &trans     &kp LBKT   &kp RBKT   &kp LT     &kp GT
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &trans    &trans        &trans     &trans
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
+            &trans  &trans  &trans  &trans  &trans    &trans       &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR
+            &trans  &trans  &trans  &trans  &trans    &kp LARW     &kp DARW   &kp UARW   &kp RARW   &kp SEMI
+            &trans  &trans  &trans  &trans  &trans    &trans       &kp LBKT   &kp RBKT   &kp LT     &kp GT
+                                            &trans    &trans       &trans     &trans
             >;
         };
+
+        BT {
+            bindings = <
+    &bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &trans  &trans    &trans                        &trans   &trans   &trans   &trans
+    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans   &trans   &trans   &trans
+    &trans  &trans  &trans  &trans  &trans    &trans                        &trans   &trans   &trans     &trans
+                                        &trans    &trans       &trans     &trans
+            >;
+        };
+
 
     };
 };
