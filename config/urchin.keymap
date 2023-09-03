@@ -22,9 +22,9 @@
 / {
         combos {
         compatible = "zmk,combos";
-        combo_caps_word {
+        combo_bt_layer {
             timeout-ms = <100>;
-            key-positions = <10 30>;
+            key-positions = <9 29>;
             bindings = <&mo BT>;
         };
     };
