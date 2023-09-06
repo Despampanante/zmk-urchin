@@ -9,11 +9,12 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define default 0
-#define NUM 1
-#define SYM 2
-#define NAV 3
-#define BT 4
+#define COLEMAK_DH 0
+#define QWERTY 1
+#define NUM 2
+#define SYM 3
+#define NAV 4
+#define BT 5
 
 &mt {
     flavor = "tap-preferred";
@@ -21,18 +22,30 @@
 };
 / {
         combos {
-        compatible = "zmk,combos";
-        combo_bt_layer {
-            timeout-ms = <100>;
-            key-positions = <9 29>;
-            bindings = <&mo BT>;
-        };
+            compatible = "zmk,combos";
+
+            combo_bt_layer {
+                timeout-ms = <100>;
+                key-positions = <9 29>;
+                bindings = <&mo BT>;
+            };
+            como_qwerty_layer {
+                timeout-ms = <100>;
+                key-positions = <0 20>;
+                bindings = <&tog QWERTY>;
+            };
+
+            esc_combo {
+                timeout-ms = <100>;
+                key-positions = <10 19>;
+                bindings = <&kp ESC>;
+            };
     };
 
      keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        colemak_dh_layer {
             bindings = <
         &kp Q      &kp W      &kp F      &kp P         &kp B          &kp J      &kp L       &kp U        &kp Y     &kp SEMI
         &mt LCTRL A &mt LALT R &mt LSHIFT S &mt LGUI T &kp G          &kp M      &mt LGUI N &mt RSHIFT E &mt LALT I &mt LCTRL O
@@ -40,12 +53,22 @@
                                          &lt NUM TAB   &lt NAV SPACE  &lt SYM ENTER  &lt NUM BSPC
             >;
         };
+        // Base alpha layer
+       		default_layer {
+		bindings = <
+		&kp Q &kp W &kp E &kp R &kp T                         &kp Y &kp U  &kp I     &kp O   &kp P
+		&mt LCTRL A &mt LALT S &mt LSHIFT D &mt LGUI F &kp G  &kp H &mt LGUI J  &mt RSHIFT K     &mt LALT L &mt LCTRL SEMI
+		&kp Z &kp X &kp C &kp V &kp B                         &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
+                            &lt NUM TAB   &lt NAV SPACE       &lt SYM ENTER  &lt NUM BSPC
+		>;
+		};
+
         SYM {
             bindings = <
-            &kp EXCL  &kp AT   &kp HASH &kp DOLLAR &kp PRCNT         &trans     &trans     &trans     &trans    &trans
-            &kp CARET &kp AMPS &kp STAR &kp MINUS  &kp EQUAL         &trans     &trans     &trans     &trans    &trans
-            &kp BSLH  &kp PIPE &trans   &kp UNDER  &kp PLUS          &trans     &trans     &trans     &trans    &trans
-                                             &trans    &trans        &trans     &trans
+            &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT           &trans     &trans     &trans     &trans    &trans
+            &kp CARET &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR            &trans     &trans     &trans     &trans    &trans
+            &kp TILDE &kp GRAVE &kp BSLH  &kp PIPE   &kp UNDER           &trans     &trans     &trans     &trans    &trans
+                                             &APOS    &kp DQT        &trans     &trans
             >;
         };
         NUM {
