@@ -66,8 +66,8 @@
 		};
 
         SYM {
-            bindings = <
             label = "SYM";
+            bindings = <
             &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT           &trans     &trans     &trans     &trans    &trans
             &kp CARET &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR            &trans     &trans     &trans     &trans    &trans
             &kp TILDE &kp GRAVE &kp BSLH  &kp PIPE   &kp UNDER           &trans     &trans     &trans     &trans    &trans
