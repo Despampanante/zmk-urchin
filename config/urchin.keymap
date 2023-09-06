@@ -78,7 +78,7 @@
             label = "NUM";
             bindings = <
             &trans     &trans     &trans     &trans     &trans       &kp FSLH   &kp n7     &kp n8     &kp n9   &kp MINUS
-            &trans     &trans     &trans     &trans     &trans       &kp LARW   &kp n4     &kp n5     &kp n6   &kp PLUS
+            &trans     &trans     &trans     &trans     &trans       &kp STAR   &kp n4     &kp n5     &kp n6   &kp PLUS
             &trans     &trans     &trans     &trans     &trans       &kp n0     &kp n1     &kp n2     &kp n3   &kp RET
                                              &trans     &trans       &kp DOT    &trans
             >;
