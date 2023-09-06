@@ -46,7 +46,7 @@
         compatible = "zmk,keymap";
 
         colemak_dh_layer {
-            label = "COLDH"
+            label = "COLDH";
             bindings = <
         &kp Q      &kp W      &kp F      &kp P         &kp B          &kp J      &kp L       &kp U        &kp Y     &kp SEMI
         &mt LCTRL A &mt LALT R &mt LSHIFT S &mt LGUI T &kp G          &kp M      &mt LGUI N &mt RSHIFT E &mt LALT I &mt LCTRL O
@@ -56,7 +56,7 @@
         };
         // Base alpha layer
        	qwerty_layer {
-            label = "QWERTY"
+            label = "QWERTY";
 		bindings = <
 		&kp Q &kp W &kp E &kp R &kp T                         &kp Y &kp U  &kp I     &kp O   &kp P
 		&mt LCTRL A &mt LALT S &mt LSHIFT D &mt LGUI F &kp G  &kp H &mt LGUI J  &mt RSHIFT K     &mt LALT L &mt LCTRL SEMI
@@ -67,7 +67,7 @@
 
         SYM {
             bindings = <
-            label = "SYM"
+            label = "SYM";
             &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT           &trans     &trans     &trans     &trans    &trans
             &kp CARET &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR            &trans     &trans     &trans     &trans    &trans
             &kp TILDE &kp GRAVE &kp BSLH  &kp PIPE   &kp UNDER           &trans     &trans     &trans     &trans    &trans
@@ -75,7 +75,7 @@
             >;
         };
         NUM {
-            label = "NUM"
+            label = "NUM";
             bindings = <
             &trans     &trans     &trans     &trans     &trans       &kp FSLH   &kp STAR   &kp n8     &kp n9   &kp MINUS
             &trans     &trans     &trans     &trans     &trans       &kp LARW   &kp n4     &kp n5     &kp n6   &kp PLUS
@@ -85,6 +85,7 @@
         };
 
         NAV {
+            label = "NAV";
             bindings = <
             &trans  &trans  &trans  &trans  &trans    &trans       &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR
             &trans  &trans  &trans  &trans  &trans    &kp LARW     &kp DARW   &kp UARW   &kp RARW   &kp SEMI
@@ -94,6 +95,7 @@
         };
 
         BT {
+            label = "BT";
             bindings = <
     &bt BT_CLR  &bt BT_NXT  &bt BT_PRV  &trans  &trans    &trans                        &trans   &trans   &trans   &trans
     &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans     &trans   &trans   &trans   &trans
