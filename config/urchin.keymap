@@ -65,15 +65,6 @@
 		>;
 		};
 
-        SYM {
-            label = "SYM";
-            bindings = <
-            &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT           &trans     &trans     &trans     &trans    &trans
-            &kp CARET &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR            &trans     &trans     &trans     &trans    &trans
-            &kp TILDE &kp GRAVE &kp BSLH  &kp PIPE   &kp UNDER           &trans     &trans     &trans     &trans    &trans
-                                             &kp APOS    &kp DQT        &trans     &trans
-            >;
-        };
 
         NUM {
             label = "NUM";
@@ -82,6 +73,16 @@
             &trans     &trans     &trans     &trans     &trans       &kp STAR   &kp N4     &kp N5     &kp N6   &kp PLUS
             &trans     &trans     &trans     &trans     &trans       &kp N0     &kp N1     &kp N2     &kp N3   &kp RET
                                              &trans     &trans       &kp DOT    &trans
+            >;
+        };
+
+        SYM {
+            label = "SYM";
+            bindings = <
+            &kp EXCL  &kp AT    &kp HASH  &kp DOLLAR &kp PRCNT           &trans     &trans     &trans     &trans    &trans
+            &kp CARET &kp AMPS  &kp STAR  &kp LPAR   &kp RPAR            &trans     &trans     &trans     &trans    &trans
+            &kp TILDE &kp GRAVE &kp BSLH  &kp PIPE   &kp UNDER           &trans     &trans     &trans     &trans    &trans
+                                             &kp APOS    &kp DQT        &trans     &trans
             >;
         };
 
