@@ -29,13 +29,19 @@
                 key-positions = <9 29>;
                 bindings = <&mo BT>;
             };
-            como_qwerty_layer {
+            combo_qwerty_layer {
                 timeout-ms = <100>;
                 key-positions = <0 20>;
                 bindings = <&tog QWERTY>;
             };
 
-            esc_combo {
+            combo_qwerty_layer {
+                timeout-ms = <100>;
+                key-positions = <0 20>;
+                bindings = <&tog QWERTY>;
+            };
+
+            combo_esc {
                 timeout-ms = <100>;
                 key-positions = <10 19>;
                 bindings = <&kp ESC>;
@@ -90,7 +96,7 @@
             label = "NAV";
             bindings = <
             &trans  &trans  &trans  &trans  &trans    &trans       &kp LBRC   &kp RBRC   &kp LPAR   &kp RPAR
-            &trans  &trans  &trans  &trans  &trans    &kp LEFT     &kp RIGHT   &kp UP   &kp RIGHT   &kp SEMI
+            &trans  &trans  &trans  &trans  &trans    &kp LEFT     &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
             &trans  &trans  &trans  &trans  &trans    &trans       &kp LBKT   &kp RBKT   &kp LT     &kp GT
                              &trans    &trans         &trans     &trans
             >;
