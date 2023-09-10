@@ -35,12 +35,6 @@
                 bindings = <&tog QWERTY>;
             };
 
-            combo_qwerty_layer {
-                timeout-ms = <100>;
-                key-positions = <0 20>;
-                bindings = <&tog QWERTY>;
-            };
-
             combo_esc {
                 timeout-ms = <100>;
                 key-positions = <10 19>;
